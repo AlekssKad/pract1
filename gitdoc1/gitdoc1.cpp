@@ -1,19 +1,36 @@
 ﻿#include <iostream>
 using namespace std;
 
-const int maxs = 30;
+const int maxs = 100;
+
+
 int main()
 {
+    double A[maxs];
+    int n;
     double max;
-    double mas[8] = { 1,4,6,2,33,67,21,12 };
-    int i_max, i;
-    max = mas[0];
+    int i_max;
+    int i;
+
+
+    cout << "size ";
+
+    cin >> n;
+    cout << "elements ";
+
+    for (i = 0; i < n; i++)
+        cin >> A[i];
+
+
+    max = A[0];
     i_max = 0;
-    for (i = 1; i < 8; i++)
-        if (mas[i] > max)
+    for (i = 1; i < n; i++)
+        if (A[i] > max)
         {
-            max = mas[i];
+            max = A[i];
             i_max = i;
         }
+
     cout << max;
-};
+    return 0;
+}
